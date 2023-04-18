@@ -282,15 +282,15 @@ function main() {
 
 	echo "$(date +%m%d%y-%H%M)"": The OneDrive folder is using ""$afterfix_size"" KB and the file count is ""$afterfix_filecount"" after fixing filenames. Restarting OneDrive." | tee -a "$fixlog"
 
-	if [[ "$beforefix_filecount" -eq "$afterfix_filecount" ]]; then
-
-		/usr/local/jamf/bin/jamf displayMessage -message "File names have been corrected. A backup has been placed in FF-Backup-$fixdate in your user folder. The backup will be replaced the next time you correct filenames. You may also delete it, should you need more space."
-
-	else
-
-		/usr/local/jamf/bin/jamf displayMessage -message "Something went wrong. A backup has been placed in FF-Backup-$fixdate in your user folder. Ask IT to help restore the backup."
-
-	fi
+#	if [[ "$beforefix_filecount" -eq "$afterfix_filecount" ]]; then
+#
+#		/usr/local/jamf/bin/jamf displayMessage -message "File names have been corrected. A backup has been placed in FF-Backup-$fixdate in your user folder. The backup will be replaced the next time you correct filenames. You may also delete it, should you need more space."
+#
+#	else
+#
+#		/usr/local/jamf/bin/jamf displayMessage -message "Something went wrong. A backup has been placed in FF-Backup-$fixdate in your user folder. Ask IT to help restore the backup."
+#
+#	fi
 
 }
 
